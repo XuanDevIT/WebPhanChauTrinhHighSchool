@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phan Châu Trinh</title>
+    <link rel="stylesheet" href="lab14.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/logo.ico" />
+    <script src="lab14.js" defer></script>
+    <script src="./login.js"></script>
+  </head>
+  <body>
+    <div id="search-block" class="search" data-search>
+      <div
+        class="search-block-container"
+        id="search-content"
+        data-search-content
+      >
+        <h3>Bạn muốn tìm gì?</h3>
+        <input type="text" placeholder="Tiểu sử Phan Châu Trinh" />
+        <button>TÌM KIẾM</button>
+      </div>
+    </div>
+    <div class="background-container">
+      <img src="images/background.avif" alt="" />
+    </div>
+    <div class="content" id="content">
+      <div class="nav-menu">
+        <div class="logo-container">
+          <div class="nav-logo">
+            <a href="./index.html"
+              ><img
+                style="width: 130px; pointer-events: none; user-select: none"
+                src="images/logo.jpg"
+                alt="Logo PCT"
+            /></a>
+            <a style="text-decoration: none" href=""
+              ><p
+                style="
+                  color: white;
+                  font-family: sans-serif;
+                  font-size: 19px;
+                  margin-left: 7px;
+                "
+              >
+                TRƯỜNG THPT <br /><span class="logo-main">PHAN CHÂU TRINH</span>
+              </p></a
+            >
+          </div>
+          <div class="nav-info">
+            <img
+              style="
+                height: 45px;
+                padding-left: 20px;
+                pointer-events: none;
+                user-select: none;
+              "
+              src="images/compass.png"
+              alt=""
+            />
+            <p class="nav-info-details">
+              <span class="yellow-info">ĐỊA CHỈ:</span>
+              <span class="line-space"></span> <br />
+              154 Lê Lợi Hải Châu 1, Đà Nẵng
+            </p>
+            <img
+              style="height: 37px; pointer-events: none; user-select: none"
+              class="icon"
+              src="images/call.png"
+              alt=""
+            />
+            <p class="nav-info-details" style="padding-right: 0">
+              <span class="yellow-info">ĐIỆN THOẠI:</span>
+              <span class="line-space"></span> <br />0511. 3810381 - 3818579.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-container">
+          <div class="nav-interact">
+            <a
+              class="link"
+              style="padding: 20px 25px 20px 10px"
+              href="./index.html"
+              >Trang chủ</a
+            >
+            <div class="dropdown" data-dropdown>
+              <a class="link" href="#" data-dropdown-button>Giới thiệu</a
+              ><img class="down-chevron" src="images/down-arrow.png" alt="" />
+              <div class="dropdown-menu" style="width: calc(100% + 70px)">
+                <div class="dropdown-link">
+                  <img class="decor" src="images/plain-triangle.png" alt="" />
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 25px 0 8px 8%"
+                    >Cơ cấu tổ chức</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 0 8px 8%"
+                    >Lịch sử thành lập trường</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 0 25px 8%"
+                    >Tiểu sử Phan Châu Trinh</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="dropdown" data-dropdown>
+              <a class="link" href="#" data-dropdown-button>Liên lạc</a
+              ><img class="down-chevron" src="images/down-arrow.png" alt="" />
+              <div class="dropdown-menu" style="width: calc(100% + 50px)">
+                <div class="dropdown-link">
+                  <img class="decor" src="images/plain-triangle.png" alt="" />
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 25px 0 8px 10%"
+                    >Ban cán sự</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 0 8px 10%"
+                    >Hội giáo viên</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 0 8px 10%"
+                    >Hội cựu học sinh</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 0 25px 10%"
+                    >Hội cựu giáo chức</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="dropdown" data-dropdown>
+              <a class="link" href="#" data-dropdown-button
+                >Tin tức nhà trường</a
+              ><img class="down-chevron" src="images/down-arrow.png" alt="" />
+              <div class="dropdown-menu" style="width: 200%; left: -50px">
+                <div class="dropdown-link">
+                  <img class="decor" src="images/plain-triangle.png" alt="" />
+                  <a
+                    href="event1.html"
+                    class="dropdown-content"
+                    style="padding: 25px 6% 8px 5%"
+                    >Trường THPT Phan Châu Trinh tổ chức Hội nghị VCNLĐ năm học
+                    2023-2024</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 6% 8px 5%"
+                    >Quyết định về việc phê duyệt danh mục Sách giáo khoa lớp 11
+                    từ năm học 2023-2024</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 6% 8px 5%"
+                    >Trường THPT Phan Châu Trinh tổng kết và Bế giảng năm học
+                    2022-2023</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 6% 8px 5%"
+                    >Thể lệ cuộc thi tìm hiểu Luật phòng chống ma tuý</a
+                  >
+                  <a
+                    href="#"
+                    class="dropdown-content"
+                    style="padding: 8px 0 25px 5%; width: 100%"
+                    >- Tìm hiểu thêm...</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="dropdown" data-dropdown>
+              <a class="link" href="#" data-dropdown-button>Đăng nhập</a
+              ><img class="down-chevron" src="images/down-arrow.png" alt="" />
+              <div class="dropdown-menu" style="width: calc(100% + 200px)">
+                <div class="dropdown-link">
+                  <img
+                    class="decor"
+                    style="left: 17%"
+                    src="images/plain-triangle.png"
+                    alt=""
+                  />
+                  <div class="form-container">
+                    <form id="form">
+                      <h2>ĐĂNG NHẬP</h2>
+                      <div class="box" style="width: 85%; position: relative">
+                        <input
+                          id="email"
+                          class="form-input"
+                          type="text"
+                          autocomplete="off"
+                          placeholder=" "
+                        />
+                        <label class="label-form" for="email">Email</label>
+                        <div class="error"></div>
+                      </div>
+                      <div class="box" style="width: 85%; position: relative">
+                        <input
+                          id="password"
+                          class="form-input"
+                          type="password"
+                          autocomplete="off"
+                          placeholder=" "
+                        />
+                        <label class="label-form" for="password"
+                          >Mật khẩu</label
+                        >
+                        <img
+                          class="eye"
+                          id="eyeclose"
+                          src="images/visibility-off.png"
+                          alt=""
+                        />
+                        <div class="error"></div>
+                      </div>
+                      <button type="submit" id="btnLogin">Đăng nhập</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-container" id="search-btn">
+            <img class="search-icon" src="images/search.png" alt="" />
+            <img
+              class="search-icon search-icon-hover"
+              src="images/search-hover.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="scroll-text-container">
+        <div class="scroll-text">
+          <div>
+            <p>
+              | Sách là cây đèn thần soi sáng cho con người trên những nẻo đường
+              xa xôi nhất và tối tăm nhất của cuộc đời. A.U.pit (Lit-va) *** Học
+              để là người (Tục ngữ) *** Học - học nữa - học mãi (Lê-nin) |
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="image-container">
+        <div class="image-scroll">
+          <img class="pic1" src="images/pic1.jpg" alt="" />
+          <div></div>
+          <p class="image-logo pic1-text">THPT PHAN CHÂU TRINH</p>
+          <p class="pic1-text">"Học để làm người"</p>
+        </div>
+        <div class="image-scroll">
+          <img class="pic2" src="images/pic2.jpg" alt="" />
+          <div></div>
+          <p class="image-logo pic2-text">THPT PHAN CHÂU TRINH</p>
+          <p class="pic2-text">"Học một biết mười"</p>
+        </div>
+        <div class="image-scroll">
+          <img class="pic3" src="images/pic3.jpg" alt="" />
+          <div></div>
+          <p class="image-logo pic3-text">THPT PHAN CHÂU TRINH</p>
+          <p class="pic3-text">"Học - học nữa - học mãi"</p>
+        </div>
+        <div class="image-scroll">
+          <img class="pic4" src="images/pic4.jpg" alt="" />
+          <div></div>
+          <p class="image-logo pic4-text">THPT PHAN CHÂU TRINH</p>
+          <p class="pic4-text">"Học thầy không tày học bạn"</p>
+        </div>
+        <div class="image-scroll">
+          <img class="pic5" src="images/pic5.jpg" alt="" />
+          <div></div>
+          <p class="image-logo pic5-text" style="top: 27.5%">
+            THPT PHAN CHÂU TRINH
+          </p>
+          <p class="pic5-text" style="top: 42.2%">
+            "Đừng xấu hổ khi không biết,<br />
+            chỉ xấu hổ khi không học"
+          </p>
+        </div>
+      </div>
+      <div class="why-PCT">
+        <div class="why-PCT-content">
+          <div>
+            <img src="images/graduation-hat.png" alt="" />
+            <div class="why-PCT-text">
+              <h3
+                style="
+                  font-family: 'Montserrat';
+                  font-size: 26px;
+                  font-weight: lighter;
+                  padding: 0 0 13px 0;
+                "
+              >
+                Vì sao nên chọn
+                <span style="color: #caa566">Phan Châu Trinh?</span>
+              </h3>
+              <p style="font-family: 'Gill Sans', sans-serif; font-size: 19px">
+                Cùng đi sâu vào trang web để hiểu rõ hơn về ngôi trường hơn 70
+                năm tuổi đời này
+              </p>
+            </div>
+          </div>
+          <button class="search-more-btn"><span>Tìm hiểu thêm</span></button>
+        </div>
+      </div>
+      <div class="why-PCT-info">
+        <div class="why-PCT-info-header">
+          <h3>VỀ NGÔI TRƯỜNG</h3>
+          <p>Là một trong những ngôi trường tốt nhất ở Đà Nẵng</p>
+          <img style="user-select: none" src="images/decal-bar.jpg" alt="" />
+        </div>
+        <div class="why-PCT-info-details">
+          <div class="why-PCT-info-details-text">
+            <p class="main-heading">CHẤT LƯỢNG GIÁO DỤC</p>
+            <p class="sub-heading">
+              Là một trong những cơ sở giáo dục nổi tiếng toàn quốc
+            </p>
+            <p>
+              Quy mô nhà trường: Từ một lớp Đệ Thất (lớp 6) đầu tiên ở năm 1952,
+              vào năm 1975, trường có 68 lớp Đệ nhất cấp (THCS) và Đệ nhị cấp
+              (THPT). Năm 2003, tròn 50 năm trường được thành lập, trường có 74
+              lớp với gần 4.000 học sinh. Năm 2013, trường có 98 lớp với hơn
+              4.700 học sinh. Vào năm học 2014, trường có 97 lớp - 4.400 học
+              sinh.
+            </p>
+            <div class="item hidden" style="padding-top: 33px; --order: 0">
+              <img src="images/tick.png" alt="" />
+              <p>Môi trường vui tươi, tích cực</p>
+            </div>
+            <div class="item hidden" style="--order: 1">
+              <img src="images/tick.png" alt="" />
+              <p>Giáo viên thân thiện, ân cần</p>
+            </div>
+            <div class="item hidden" style="--order: 2">
+              <img src="images/tick.png" alt="" />
+              <p>Lí thuyết đi đôi với thực hành</p>
+            </div>
+            <div class="item hidden" style="--order: 3">
+              <img src="images/tick.png" alt="" />
+              <p>Cơ sở vật chất đầy đủ, hiện đại</p>
+            </div>
+            <div class="item hidden" style="padding-bottom: 40px; --order: 4">
+              <img src="images/tick.png" alt="" />
+              <p>Các hoạt động nâng cao nhận thức cá nhân</p>
+            </div>
+            <button class="search-more-btn item hidden" style="--order: 5">
+              <span>Tìm hiểu thêm</span>
+            </button>
+          </div>
+          <div class="why-PCT-info-details-text-icons">
+            <div class="item-1 item hidden">
+              <img src="images/school.png" alt="" />
+              <p class="heading">CƠ SỞ VẬT CHẤT</p>
+              <p>
+                Cơ sở vật chất nhà trường hiện đại, đầy đủ phục vụ cho việc học
+                tập của học sinh
+              </p>
+            </div>
+            <div class="item-2 item hidden">
+              <img src="images/friend.png" alt="" />
+              <p class="heading">BẠN BÈ ĐỒNG LỨA</p>
+              <p>
+                Bạn bè giỏi giang, phụ giúp lẫn nhau trên con đường học tập, tối
+                ưu hóa kết quả
+              </p>
+            </div>
+            <div class="item-3 item hidden">
+              <img src="images/tree.png" alt="" />
+              <p class="heading">MÔI TRƯỜNG HỌC</p>
+              <p>
+                Môi trường học thân thiện với môi trường, tạo sự thoải mái cho
+                học sinh
+              </p>
+            </div>
+            <div class="item-4 item hidden">
+              <img src="images/lecture.png" alt="" />
+              <p class="heading">BUỔI HỌC</p>
+              <p>
+                Giáo viên hàng đầu Đà Nẵng, sẵn sàng giải đáp sự hiếu kì của học
+                sinh
+              </p>
+            </div>
+            <div class="item-5 item hidden">
+              <img src="images/noodle.png" alt="" />
+              <p class="heading">CĂN-TIN HIỆN ĐẠI</p>
+              <p>
+                Căn-tin sạch sẽ, chất lượng cao cùng đa dạng món ăn cho học sinh
+                lựa chọn
+              </p>
+            </div>
+            <div class="item-6 item hidden">
+              <img src="images/cheer.png" alt="" />
+              <p class="heading">HOẠT ĐỘNG</p>
+              <p>
+                Hoạt động thường niên nhằm nâng cao kĩ năng cá nhân cho học sinh
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image-scroller">
+        <div class="inner-image-scroller">
+          <div><img src="images/scroll-pic1.jpg" alt="" /></div>
+          <div><img src="images/scroll-pic2.jpg" alt="" /></div>
+          <div><img src="images/scroll-pic3.jpg" alt="" /></div>
+          <div><img src="images/scroll-pic4.jpg" alt="" /></div>
+          <div><img src="images/scroll-pic5.jpg" alt="" /></div>
+          <div><img src="images/scroll-pic6.jpg" alt="" /></div>
+        </div>
+      </div>
+      <div class="why-PCT">
+        <div class="why-PCT-content">
+          <div>
+            <img
+              style="width: 105px; margin-left: 15px"
+              src="images/camera.jpg"
+              alt=""
+            />
+            <div class="why-PCT-text" style="margin-left: 25px">
+              <h3
+                style="
+                  font-family: 'Montserrat';
+                  font-size: 26px;
+                  font-weight: lighter;
+                  padding: 0 0 13px 0;
+                "
+              >
+                Trường THPT <span style="color: #caa566"> Phan Châu Trinh</span>
+              </h3>
+              <p style="font-family: 'Gill Sans', sans-serif; font-size: 19px">
+                Muốn xem những kỉ niệm đáng quý năm cấp 3 dưới mái trường này?
+              </p>
+            </div>
+          </div>
+          <button class="search-more-btn"><span>Xem thư viện</span></button>
+        </div>
+      </div>
+      <div class="counter-container">
+        <div>
+          <div class="counter">
+            <img src="images/teacher.png" alt="" />
+            <div>
+              <h2 data-target="200" data-timing="13.3" class="count">0</h2>
+              <h4>Giáo viên</h4>
+            </div>
+          </div>
+          <div class="counter">
+            <img src="images/classroom.png" alt="" />
+            <div>
+              <h2 data-target="105" data-timing="31.3" class="count">0</h2>
+              <h4>Phòng học</h4>
+            </div>
+          </div>
+          <div class="counter">
+            <img src="images/single-tree.png" alt="" />
+            <div>
+              <h2 data-target="74" data-timing="48" class="count">0</h2>
+              <h4>Cây trồng</h4>
+            </div>
+          </div>
+          <div style="width: 17%" class="counter">
+            <img src="images/food.png" alt="" />
+            <div>
+              <h2 data-target="58" data-timing="73" class="count">0</h2>
+              <h4>Món ăn</h4>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <!-- Cái ni làm block-event nhưng cùng class do cùng bố trí header  -->
+      <div class="why-PCT-info" style="background-color: white">
+        <div class="why-PCT-info-header">
+          <h3>CÓ GÌ MỚI</h3>
+          <p>Luôn nắm bắt rõ các tình hình ở trường</p>
+          <img style="user-select: none" src="images/decal-bar.jpg" alt="" />
+        </div>
+        <div class="whats-new-info">
+          <div class="whats-new-block">
+            <a href="event1.html">
+              <div><img src="images/event1.jpg" alt="" /></div>
+              <p><span class="time-hover">30</span> tháng 9</p>
+              <h3>Tổ chức Hội nghị VCNLĐ năm học 2023 - 2024</h3>
+              <p class="whats-new-text">
+                Sáng ngày 30/9/2023, trường THPT Phan Châu Trinh long trọng tổ
+                chức Hội nghị viên chức, người lao động năm học 2023-2024...
+              </p>
+            </a>
+          </div>
+          <div class="whats-new-block">
+            <a href="event2.html">
+              <div><img src="images/event2.jpg" alt="" /></div>
+              <p><span class="time-hover">4</span> tháng 5</p>
+              <h3>Đại hội Chi hội Khuyến học nhiệm kì 2023 - 2028</h3>
+              <p class="whats-new-text">
+                Chiều ngày 04/05/2023, Chi hội khuyến học trường THPT Phan Châu
+                Trinh-Đà Nẵng tổ chức Đại hội lần thứ 3, nhiệm kì 2023-2028...
+              </p>
+            </a>
+          </div>
+          <div class="whats-new-block">
+            <a href="event3.html">
+              <div><img src="images/event3.jpg" alt="" /></div>
+              <p><span class="time-hover">16</span> tháng 3</p>
+              <h3>Sinh hoạt kỉ niệm 113 năm ngày Quốc tế Phụ nữ</h3>
+              <p class="whats-new-text">
+                Ngày Quốc tế phụ nữ hay còn gọi là Ngày Liên Hiệp Quốc vì Nữ
+                quyền và Hòa bình Quốc tế được tổ chức vào ngày 8 tháng 3 hằng
+                năm...
+              </p>
+            </a>
+          </div>
+        </div>
+        <div style="width: 100%; display: flex; justify-content: center">
+          <button class="watch-more"><span>Xem thêm</span></button>
+        </div>
+      </div>
+      <div class="why-PCT">
+        <div class="why-PCT-content">
+          <div>
+            <img src="images/bag.jpg" alt="" />
+            <div class="why-PCT-text" style="margin-left: 25px">
+              <h3
+                style="
+                  font-family: 'Montserrat';
+                  font-size: 26px;
+                  font-weight: lighter;
+                  padding: 0 0 13px 0;
+                "
+              >
+                Trường THPT <span style="color: #caa566">Phan Châu Trinh</span>
+              </h3>
+              <p style="font-family: 'Gill Sans', sans-serif; font-size: 19px">
+                Luôn sẵn sàng chào đón những gương mặt mới đến với mái trường
+                này
+              </p>
+            </div>
+          </div>
+          <button class="search-more-btn"><span>Tìm hiểu thêm</span></button>
+        </div>
+      </div>
+      <div class="new-event-info">
+        <div class="new-event-header">
+          <h3>SỰ KIỆN SẮP TỚI</h3>
+          <p>Luôn chuẩn bị tinh thần cho các sự kiện mới</p>
+          <img style="user-select: none" src="images/decal-bar.jpg" alt="" />
+        </div>
+        <div class="new-event-block">
+          <div class="new-event-image-container">
+            <img src="images/ticket.jpg" alt="" />
+          </div>
+          <div class="new-event-container">
+            <div class="new-event-top">
+              <div class="new-event-1">
+                <p>
+                  <span style="font-size: 25px; color: #22364f">22</span> tháng
+                  Mười
+                </p>
+                <div style="margin-left: 15px" class="new-event-detail">
+                  <img
+                    src="images/clock.png"
+                    alt=""
+                    style="width: 20px; height: 20px; user-select: none"
+                  />
+                  <p style="margin-left: 7.5px">7h30 - 18h</p>
+                </div>
+              </div>
+              <h3><span>Shine 2023</span> - Toả sáng tài năng 2023</h3>
+              <p>
+                Cuộc thi Shine hằng năm được tổ chức nhằm tạo ra một sân chơi,
+                tìm kiếm và phát triển những tài năng trong lĩnh vực nghệ thuật
+                của trường THPT Phan Châu Trinh
+              </p>
+            </div>
+            <div class="new-event-bottom revealed">
+              <p class="new-event-time" style="margin-left: 2px">
+                154 Lê Lợi, Hải Châu 1, Đà Nẵng
+              </p>
+              <p class="float-right">40.000 VND</p>
+            </div>
+            <div class="new-event-bottom unrevealed">
+              <p class="new-event-time" style="margin-left: 3.5px">
+                <span>#Music </span><span>#Performance </span><span>#PCT</span>
+              </p>
+              <button class="ticket-button float-right">MUA VÉ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-input-container why-PCT">
+        <div class="footer-input-content why-PCT-content">
+          <img src="images/light-bulb.jpg" alt="" />
+          <div class="footer-input">
+            <label for="recommendation"
+              >Bạn muốn đề xuất những <span>ý tưởng mới?</span></label
+            >
+            <input type="text" id="recommendation" placeholder="Nhập vào đây" />
+            <button class="send-button">
+              <span class="new">CẢM ƠN</span>
+              <span class="old">GỬI ĐI</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info-container">
+        <div class="footer-info">
+          <h3>Về ngôi trường</h3>
+          <p>
+            Trường Trung học phổ thông Phan Châu Trinh là một trường trung học
+            phổ thông được thành lập vào ngày 15 tháng 9 năm 1952, tại Hải Châu,
+            Đà Nẵng. Trường là một trong những đơn vị giáo dục có uy tín, đào
+            tạo nguồn nhân lực chất lượng cao nhất trong thành phố Đà Nẵng.
+          </p>
+          <a href="index.html"
+            ><img class="logo" src="images/logo.jpg" alt=""
+          /></a>
+        </div>
+        <div class="footer-info">
+          <h3>Tình hình gần đây</h3>
+          <a href="event1.html">
+            <div class="footer-images" style="margin-top: 30px">
+              <img class="event" src="images/event1.jpg" alt="" />
+              <div>
+                <p>Tổ chức Hội nghị VCNLĐ năm học 2023 - 2024</p>
+                <p><span class="time-hover">30</span> tháng 9</p>
+              </div>
+            </div>
+          </a>
+          <a href="event2.html">
+            <div class="footer-images">
+              <img class="event" src="images/event2.jpg" alt="" />
+              <div>
+                <p>Đại hội Chi hội Khuyến học nhiệm kì 2023 - 2028</p>
+                <p><span class="time-hover">4</span> tháng 5</p>
+              </div>
+            </div>
+          </a>
+          <a href="event3.html">
+            <div class="footer-images">
+              <img class="event" src="images/event3.jpg" alt="" />
+              <div>
+                <p>Sinh hoạt kỉ niệm 113 năm ngày Quốc tế Phụ nữ</p>
+                <p><span class="time-hover">16</span> tháng 3</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="footer-info">
+          <h3>Đặc sắc của trường</h3>
+          <p style="margin-top: 25px">
+            Là một trong những trung tâm giáo dục tốt nhất Đà Nẵng, trường Trung
+            học phổ thông Phan Châu Trinh luôn ưu tiên việc xây dựng tư duy và
+            bồi dưỡng kiến thức cho học sinh.
+          </p>
+          <div style="margin-top: 20px">
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Cơ sở vật chất chất lượng cao</p>
+          </div>
+          <div>
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Các buổi học truyền cảm hứng</p>
+          </div>
+          <div>
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Căn-tin hiện đại, sạch sẽ, an toàn</p>
+          </div>
+          <div>
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Môi trường học xanh tươi, thoải mái</p>
+          </div>
+          <div>
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Hoạt động tổ chức thường niên</p>
+          </div>
+          <div>
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Giáo viên tích cực, sẵn sàng</p>
+          </div>
+          <div>
+            <img class="tick" src="images/tick.png" alt="" />
+            <p>Nội quy nghiêm khắc đảm bảo trật tự</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="icon-container">
+          <a href="https://www.facebook.com/profile.php?id=100050036280869">
+            <img
+              src="images/facebook.png"
+              alt=""
+              class="icon"
+              style="padding-left: 12px"
+            />
+            <img
+              src="images/facebook-hover.png"
+              alt=""
+              class="icon-hover"
+              style="left: calc(50% + 6px)"
+            />
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="#">
+            <img src="images/instagram.png" alt="" class="icon" />
+            <img src="images/instagram-hover.png" alt="" class="icon-hover" />
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="#">
+            <img src="images/twitter.png" alt="" class="icon" />
+            <img src="images/twitter-hover.png" alt="" class="icon-hover" />
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="#">
+            <img
+              src="images/discord.png"
+              alt=""
+              class="icon"
+              style="width: 31.71px; height: 31.71px"
+            />
+            <img
+              src="images/discord-hover.png"
+              alt=""
+              class="icon-hover"
+              style="width: 31.71px; height: 31.71px"
+            />
+          </a>
+        </div>
+        <p>
+          © 2023 Trường trung học phổ thông Phan Châu Trinh được làm với
+          <img src="images/fire.png" alt="" /> bởi Jackxeid
+        </p>
+      </div>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>

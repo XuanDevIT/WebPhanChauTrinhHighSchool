@@ -1,0 +1,794 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    position: relative;
+}
+.background-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;
+}
+.background-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Background */
+.background-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;
+}
+.background-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Search-block */
+.search{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.245);
+    z-index: 1000;
+    overflow-x: hidden;
+}
+.show{
+    display: block;
+}
+.search.show .search-block-container{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.search-block-container{
+    position: absolute;
+    width: 620px;
+    height: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+}
+.search-block-container > h3{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 18px;
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: lighter;
+}
+.search-block-container > input{
+    width: 100%;
+    height: 46px;
+    padding: 0 155px 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+.search-block-container > button{
+    position: absolute;
+    right: 2px;
+    top: 81px;
+    height: 41px;
+    padding: 0 30px;
+    background-color: #22364F;
+    display: block;
+    border: 3px solid #22364F;
+    outline: 0;
+    border-radius: 28px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+.search-block-container > button:hover{
+    background-color: white;
+    border: 3px solid #22364F;
+    color: #22364F;
+}
+
+
+/* Header */
+.nav-menu{
+    background-color: #22364F;
+    display: flex;
+    justify-content: center;
+}
+.logo-container{
+    min-width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+.logo-main{
+    color: #C6AB7C;
+    font-family: 'Lato';
+    font-size: 35px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+.nav-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.icon{
+    height: 50px;
+}
+.nav-info-details{
+    color: white;
+    padding: 0 40px 0 20px; 
+    margin-left: 20px; 
+    border-left: 2px solid white;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 14px;
+}
+.line-space{
+    display: block;
+    margin-bottom: -14px;
+}
+.yellow-info{
+    color: #d8b60b;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+/* Navbar */
+.nav-bar{
+    background-color: rgb(239, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 100;
+}
+.nav-container{
+    position: relative;
+    min-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-interact{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.dropdown{
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.link{
+    font-family: 'Young-Serif', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    height: 60.8px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    text-transform: uppercase;
+}
+.link:hover{
+    color: #d8b60b;
+}
+.dropdown.active > .link{
+    color: #d8b60b;
+}
+.dropdown-menu{
+    position: absolute;
+    top: calc(100% + 13px);
+    left: 0;
+    width: calc(100% + 100px);
+    background-color: #556D89;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: transform 0.2s ease-in-out,  opacity 0.2s ease-in-out;
+    border-radius: 0.25rem;
+    box-shadow: 2px 4px 5px 0.3px rgba(0, 0, 0, 0.296);
+    z-index: 5;
+}
+.dropdown.active > .dropdown-menu{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.dropdown-link{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.decor{
+    height: 13px;
+    position: absolute;
+    left: 27%;
+    top: -11px;
+    box-sizing: content-box;
+    user-select: none;
+}
+.dropdown-content{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-left: 5%;
+    font-family: 'Young-Serif', sans-serif;
+    transition: transform 0.2s ease-in-out;
+}
+.dropdown-content:hover{
+    transform: translateX(8px);
+    color: #eac611;
+}
+.down-chevron{
+    margin-left: 4px;
+    width: 19px;
+    rotate: -90deg;
+    transition: rotate 0.25s;
+    user-select: none;
+}
+.dropdown.active > .down-chevron{
+    rotate: 0deg;
+}
+
+
+/* Form */
+.form-container{
+    transform: translate(0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+#form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content:space-evenly;
+    justify-content: center;
+}
+#form > h2{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    padding: 7% 0 1% 0;
+    user-select: none;
+    cursor: auto;
+}
+.box{
+    padding: 20px 0 10px 0;
+    cursor: auto;
+}
+.label-form{
+    font-family: 'Nunito';
+    transition: all 0.3s;
+    user-select: none;
+    pointer-events: none;
+    font-weight: bold;
+}  
+.form-input:placeholder-shown + .label-form{
+    display: block;
+    position: absolute; 
+    top: 18.5px;
+    left: 5px;
+    color: rgb(255, 255, 255) ;
+    font-size: 1.1em;
+}
+.form-input:is(:not(:placeholder-shown), :focus) + .label-form{
+    display: block;
+    position: absolute;
+    top: 1.5px;
+    left: 1px;
+    font-size: 0.9em;
+    color: #efcb18;
+}
+.form-input{
+    padding: 4px 0 5px 0;
+    width: 100%;
+    text-overflow: none;
+    font-size: 1em;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
+}
+.form-input:focus{
+    border-bottom: 2px solid #efcb18;
+}
+.form-input::placeholder{
+    color: transparent;
+    user-select: none;
+}
+.box.error .form-input{
+    border-bottom: rgb(255, 86, 86) 2px solid;
+}
+.box .error{
+    font-size: 0.9em;
+    font-family: 'Nunito';
+    font-weight: bolder;
+    margin-top: 7px;
+    margin-left: 1px;
+    color: rgb(255, 86, 86);
+    user-select: none;
+    pointer-events: none;
+}  
+.eye{
+    display: block;
+    position: absolute;
+    bottom: 21%;
+    right: 3%;
+    padding-bottom: 11px;
+    width: 1.3em;
+    cursor: pointer;
+}
+.box.error .eye{
+    margin-bottom: 15px;
+}
+#form > button{
+    outline: 0;
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(47, 122, 198);
+    padding: 9px 0;
+    margin: 10px 0 17px 0;
+    border: rgb(47, 122, 198) 3px solid;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.7s ;
+}
+#form > button:focus-visible,
+#form > button:hover{
+    transform: translateY(-10px);
+    transition: all 0.35s;
+    color: white;
+    background-color: rgb(47, 122, 198);
+}
+
+
+/* Nút tìm kiếm */
+.search-container{
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    border-left: 1.6px solid black;
+}
+.search-icon{
+    height: 33px;
+    user-select: none;
+    transition: opacity 0.2s;
+}
+.search-container > .search-icon-hover{
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.search-container:is(:hover, :focus) > .search-icon{
+    opacity: 0;
+}
+.search-container:is(:hover, :focus) > .search-icon-hover{
+    opacity: 1  ;
+}
+
+
+/* Chữ chạy dưới task bar */
+.scroll-text-container{
+    width: 100%;
+    overflow: hidden;
+    height: 50px;
+    background-color: #caa566;
+}
+.scroll-text{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    white-space: nowrap;
+}
+.scroll-text > div > p{
+    font-family: 'Nunito';
+    font-weight: bolder;
+    font-size: 19px;
+    color: rgb(31, 52, 79);
+    animation: RightToLeft 18s linear infinite;
+}
+@keyframes RightToLeft{
+    from{
+        transform: translateX(105%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Tên sự kiện */
+.title-container{
+    width: 100%;
+    padding: 45px 0;
+    text-align: center;
+    background-color: rgb(239, 239, 239);
+}
+.title-container > p{
+    font-size: 3.3vw;
+    font-family: 'Montserrat', sans-serif;
+    color: #22364F;
+}
+
+
+/* Thông tin sự kiện */
+.event-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event-info-container{
+    width: 80%;
+    position: relative;
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.event-info{
+    width: 65%;
+}
+.event-info > .time{
+    color: #e3ad51;
+    font-family: 'Nunito', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+.event-info > img{
+    width: 100%;
+    padding-top: 30px;
+    user-select: none;
+}
+.event-info > h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+    padding-top: 35px;
+    color: #22364F;
+}
+.event-info > p{
+    font-family:'Gill Sans', sans-serif;
+    letter-spacing: 0.25px;
+    font-size: 17px;
+    line-height: 26px;
+    padding-top: 17px;
+}
+
+
+/* Mục lục */
+.event-catalog{
+    position: sticky;
+    top: 110px;
+    right: 150px;
+    margin-top: 10px;
+}
+.event-catalog > ul{
+    list-style-type: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+.event-catalog .main-li{
+    margin-bottom: 13px;
+    font-size: 22px;
+    border: 0;
+    color: #22364F;
+}
+.event-catalog > ul > li{
+    height: 40px;
+    border-left: 2px solid rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+}
+.event-catalog a{
+    text-decoration: none;
+    padding-left: 17px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 21px;
+}
+.event-catalog > ul > li:not(.main-li):has(:hover, :focus){
+    border-left: 2px solid #b9811f;
+    background-color: rgb(239, 239, 239);
+}
+.event-catalog > ul > li:has(:hover, :focus) > a{
+    color: black;
+}
+
+
+/* Chuyển qua sự kiện khác */
+.change-event-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.change-event-content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 3.3px solid rgb(221, 219, 219);
+    padding: 50px 0 20px 0;
+}
+.change-event-content > a{
+    text-decoration: none;
+    width: 47%;
+}
+.change-event-right{
+    display: flex;
+    background-color: rgb(251, 251, 251);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, .2);
+    transition: all 300ms ease-out;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+.change-event-right:hover{
+    color: black;
+    box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.3);
+}
+.change-event-right > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 13px 0 13px 20px;
+}
+.change-event-right > img{
+    rotate: -90deg;
+    transform: translateY(-20px);
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    scale: 0.9;
+    transition: all 250ms ease-out;
+    user-select: none;
+}
+.change-event-right:hover > img{
+    transform: translateY(-5px);
+    opacity: 1;
+    scale: 1;
+}
+.change-event-left{
+    display: flex;
+    background-color: rgb(251, 251, 251);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -3px 5px 8px rgba(0, 0, 0, .2);
+    transition: all 300ms ease-out;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+.change-event-left:hover{
+    color: black;
+    box-shadow: -5px 7px 9px rgba(0, 0, 0, 0.3);
+}
+.change-event-left > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 13.5px 25px 13.5px 0;
+}
+.change-event-left > img{
+    rotate: 90deg;
+    transform: translateY(-20px);
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    scale: 0.9;
+    transition: all 250ms ease-out;
+    user-select: none;
+}
+.change-event-left:hover > img{
+    transform: translateY(-5px);
+    opacity: 1;
+    scale: 1;
+}
+
+
+/* Footer-info */
+.footer-info-container{
+    background-color: #22364F;
+    display: flex;
+    justify-content: center;
+    margin-top: 47px;
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-left: 30px;
+    padding: 13px 0 60px 0;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+.footer-info > a{
+    text-decoration: none;
+}
+.footer-info img{
+    user-select: none;
+}
+.footer-info > h3{
+    margin-top: 40px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.footer-info > h3::after{
+    content: '';
+    background-color: #e3ad51;
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin-top: 18px;   
+}
+.footer-info > p{
+    margin-top: 32px;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    line-height: 26.5px;
+}
+.footer-info > a > .logo{
+    width: 220px;
+    margin-top: 10px;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+}
+.footer-info > a > .footer-images{
+    margin-top: 30px;
+    display: flex;
+    cursor: pointer;
+}
+.footer-images > .event{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+.footer-images > div > p{
+    color: white;
+    margin-left: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 19px;
+    letter-spacing: 0.25px;
+}
+.footer-images > div .time-hover{
+    color: #e3ad51;
+    font-size: 32px;
+    display: inline-block;
+    padding-top: 8px;
+}
+.footer-images p:hover{
+    text-decoration: underline;
+}
+.footer-info > div{
+    margin-top: 9px;
+    display: flex;
+}
+.footer-info > div > .tick{
+    width: 20px;
+    height: 20px;
+}
+.footer-info > div > p{
+    color: white;
+    padding-left: 13px;
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.25px;
+    line-height: 26.5px;
+}
+
+
+/* End */
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    background-color: white;
+}
+.footer-container > .icon-container{
+    border-radius: 100%;
+    border: 2px solid #dadada;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45px;
+}
+.icon-container > a > img{
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+.icon-container > a > .icon{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.icon-container > a > .icon-hover{
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 1.83px);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.icon-container > a:has(:hover, :focus) .icon{
+    opacity: 0;
+}
+.icon-container > a:has(:hover, :focus) .icon-hover{
+    opacity: 1;
+}
+.footer-container > p{
+    padding: 20px 0 15px 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+}
+.footer-container > p > img{
+    width: 22px;
+    height: 22px;
+    user-select: none;
+}
+
+
+@media (max-width: 1185px) {
+    .footer-info{
+        width: 33.3%;
+    }
+    }
